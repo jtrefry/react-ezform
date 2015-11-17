@@ -1,0 +1,46 @@
+/***************************
+ FORM LAYOUT
+ With responsive form layouts, if a help-block is visible on one column, it will have a different height than the other
+ columns in the same row and push the column directly below it, to the right (on the next row).
+ By explicity clearing the divs after 2 columns for small, and 4 columns for medium, columns of varying heights remain
+ on the same row. Bootstrap does not appear to have a mechanism for handling this scenario.
+***************************/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    /* force the next row to the left after every 2 variable height columns */
+    .variable-height-rows > div:nth-child(2n+1) {
+        clear: left;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .variable-height-rows > div:nth-child(2n+1) {
+        clear: none;
+    }
+    /* force the next row to the left after every 4 variable height columns */
+    .variable-height-rows > div:nth-child(4n+1) {
+        clear: left;
+    }
+}
+
+.tooltip-icon {
+    font-size: 1rem;
+    border: 1px solid #000;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    border-radius: 1.5rem;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+
+    display: inline-block;
+    position: relative;
+    top: -.3rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 10px;
+    padding: .3rem;
+}

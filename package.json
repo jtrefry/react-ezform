@@ -1,0 +1,70 @@
+{
+  "name": "react-ezform",
+  "version": "1.0.0",
+  "description": "A React component for creating dynamic Bootstrap forms by passing a simple declarative model to its props. Includes validation, a single onFormChange event, immutable data, straightforward hooks for customization, and responsive column layouts.",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtrefry/react-ezform.git"
+  },
+  "keywords": [
+    "react",
+    "bootstrap",
+    "forms",
+    "dynamic",
+    "easy",
+    "ez",
+    "ezforms",
+    "simple",
+    "validation",
+    "immutable",
+    "hooks",
+    "customization"
+  ],
+  "scripts": {
+    "clean": "rimraf build",
+    "build:webpack": "NODE_PATH='source/modules' webpack -d --watch --config webpack.config.dev.js",
+    "build": "npm run clean && npm run build:webpack",
+    "start": "node devServer.js",
+    "lint": "eslint src",
+    "watch": "watch 'clear && npm run lint -s' src"
+  },
+  "author": "James Trefry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jtrefry/react-ezform/issues"
+  },
+  "homepage": "https://github.com/jtrefry/react-ezform#readme",
+  "dependencies": {
+    "history": "^1.13.1",
+    "react": "^0.14.2",
+    "react-bootstrap": "^0.28.1",
+    "react-dom": "^0.14.2",
+    "react-router": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel": "^6.1.18",
+    "babel-core": "^6.1.21",
+    "babel-loader": "^6.1.0",
+    "babel-plugin-react-transform": "^1.1.1",
+    "babel-plugin-transform-react-jsx": "^6.1.18",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "css-loader": "^0.23.0",
+    "eslint": "^1.9.0",
+    "eslint-plugin-react": "^3.8.0",
+    "express": "^4.13.3",
+    "file-loader": "^0.8.4",
+    "json-loader": "^0.5.3",
+    "path": "^0.12.7",
+    "rimraf": "^2.4.3",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.6",
+    "watch": "^0.16.0",
+    "webpack": "^1.12.6",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-dev-server": "^1.12.1",
+    "webpack-hot-middleware": "^2.5.0"
+  }
+}
