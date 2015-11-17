@@ -157,13 +157,13 @@ export default contactFormFields;
 ```
 
 ##PropTypes and Documentation
-Here are the React PropTypes (aliased with 't') for the EZForm component.
+Here are the React PropTypes (aliased with 't') specified in the [EZForm.js](./src/components/EZForm.js) component:
 
 ```javascript
 import React, { PropTypes as t } from 'react';
 
 EZForm.propTypes = {
-    /** A hash of name value pairs bound to the form the names must match the field names passed to the 'fields' prop.
+    /** A hash of name value pairs bound to the form. The names must match the field names passed to the 'fields' prop.
      *  Nested objects are not supported at this time, but they could be implemented by rending nested EZForm components. */
     data: t.object.isRequired,
     /** A function accepting the new (immutable) form data that is called for any change (including a single keystroke). */
