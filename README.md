@@ -23,13 +23,23 @@ If you're running Windows 8 or below, then carefully following the
 
 ```
 $ npm install
-$ node index.js
+$ npm start
 ```
 
 Then open [http://localhost:4000](http://localhost:4000). You should see this example: ![Form Example](./example.png).
 
 Then, if you open your browser's developer tools, and watch the console as you enter data into the form, you will see
 the new form data logged for every change - including single keystrokes.
+
+##Build
+To build the project run the following command:
+
+```
+$ npm run build
+```
+
+This will create a new dist/js/bundle.js file. Notice that react, react-dom and react-bootstrap are excluded from
+bundle.js. Instead, they are added to dist/index.html as external script tags.
 
 ##Declaring Fields
 React EZ Form lets you build a form by simply declaring the fields and their behaviors.
