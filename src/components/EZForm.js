@@ -66,7 +66,7 @@ class EZForm extends React.Component {
 
         fields.forEach(field => {
             const isValid = this.validate(data, field.name);
-            if (isValid == false) {
+            if (isValid === false) {
                 areAllValid = false;
             }
         });
@@ -75,7 +75,7 @@ class EZForm extends React.Component {
     }
 
     renderValidationMessages(messages) {
-        return messages ? messages.map((msg, index) => <div key={index}>{msg}</div>) : null;
+        return messages ? messages.map((msg, index) => <div>{msg}</div>) : null;
     }
 
     handleOnBlur(fieldName, fieldValue) {
@@ -186,7 +186,7 @@ class EZForm extends React.Component {
                         onBlur={(e) => this.handleOnBlur(field.name, options.find(o => o.text === e.target.value).id)}
                         onChange={(e) => this.handleOnChange(field.name, options.find(o => o.text === e.target.value).id)}>
 
-                        { options && options.map( (o, index) => <option key={index} id={o.id}>{o.text}</option>)}
+                        { options && options.map( (o, index) => <option id={o.id}>{o.text}</option>)}
 
                     </select>
                 );
@@ -231,7 +231,7 @@ class EZForm extends React.Component {
             attributes = { ...attributes, ...field.div.attributes };
         }
 
-        return <div key={field.name} {...attributes}>
+        return <div {...attributes}>
             <div className={`checkbox${fieldState.isValid ? '' : ' has-error'}`}>
                 <label>
                     {this.renderCheckboxControl(field)}
@@ -260,7 +260,7 @@ class EZForm extends React.Component {
             attributes.className += ' form-inline';
         }
 
-        return <div key={field.name} {...attributes}>
+        return <div {...attributes}>
             <div className={`form-group${fieldState.isValid ? '' : ' has-error'}`}>
                 { this.renderLabel(field) }
                 { val(field, 'tooltip.render') && field.tooltip.render(this.props.data, field) }
