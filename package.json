@@ -33,9 +33,9 @@
   },
   "homepage": "https://github.com/jtrefry/react-ezform#readme",
   "dependencies": {
-    "react": "^15.0.1",
-    "react-bootstrap": "^0.28.5",
-    "react-dom": "^15.0.1"
+    "react": "^15.0.2",
+    "react-bootstrap": "^0.29.4",
+    "react-dom": "^15.0.2"
   },
   "devDependencies": {
     "babel": "^6.5.2",

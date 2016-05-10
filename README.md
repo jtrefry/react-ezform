@@ -26,7 +26,7 @@ $ npm install
 $ npm start
 ```
 
-Then open [http://localhost:4000](http://localhost:4000). You should see this example: ![Form Example](./example.png).
+Then open [http://localhost:3000](http://localhost:3000). You should see this example: ![Form Example](./example.png).
 
 Then, if you open your browser's developer tools, and watch the console as you enter data into the form, you will see
 the new form data logged for every change - including single keystrokes.
